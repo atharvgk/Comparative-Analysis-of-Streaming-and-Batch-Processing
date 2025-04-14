@@ -2,13 +2,6 @@
 
 A real-time data processing pipeline for Twitter data using Kafka and Spark Streaming.
 
-## Prerequisites
-
-- Apache Kafka
-- Apache Spark
-- PostgreSQL
-- Python 3.x
-
 ## Setup
 
 1. Install dependencies:
@@ -68,5 +61,5 @@ A real-time data processing pipeline for Twitter data using Kafka and Spark Stre
 ## Output
 
 - Processed tweets saved to PostgreSQL
-- Real-time analytics displayed in console
+- Real-time analytics displayed in CLI
 - Batch vs Streaming performance metrics 
