@@ -1,33 +1,22 @@
 # Twitter Data Processing Pipeline
 
-This project implements a real-time data processing pipeline for Twitter data using Kafka and Spark Streaming.
-
-## Components
-
-1. **Kafka Setup**
-   - Producer: Reads tweets from CSV and publishes to Kafka
-   - Consumer: Consumes tweets from Kafka and saves to CSV
-
-2. **Spark Streaming**
-   - Real-time processing of tweets
-   - Hashtag analysis and counting
-   - Results saved to CSV files
+A real-time data processing pipeline for Twitter data using Kafka and Spark Streaming.
 
 ## Prerequisites
 
-1. Apache Kafka (installed and running)
-2. Apache Spark (installed and running)
-3. Python 3.x
-4. Required Python packages (install using `pip install -r requirements.txt`)
+- Apache Kafka
+- Apache Spark
+- PostgreSQL
+- Python 3.x
 
-## Setup Instructions
+## Setup
 
 1. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-2. Make sure Kafka and Zookeeper are running:
+2. Start Kafka services:
    ```bash
    # Start Zookeeper
    /usr/local/kafka/bin/zookeeper-server-start.sh /usr/local/kafka/config/zookeeper.properties
@@ -36,37 +25,48 @@ This project implements a real-time data processing pipeline for Twitter data us
    /usr/local/kafka/bin/kafka-server-start.sh /usr/local/kafka/config/server.properties
    ```
 
-3. Create Kafka topic (if not already created):
+3. Create Kafka topic:
    ```bash
    /usr/local/kafka/bin/kafka-topics.sh --create --topic tweets_topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
    ```
 
+4. Setup database:
+   ```bash
+   python setup_database.py
+   ```
+
 ## Running the Application
 
-1. Start the Kafka Producer:
+1. Start Kafka Producer:
    ```bash
    python kafka_producer.py
    ```
 
-2. Start the Spark Streaming application:
+2. Start Spark Streaming:
    ```bash
    python spark_streaming.py
    ```
 
-3. (Optional) Start the Kafka Consumer:
+3. (Optional) Start Kafka Consumer:
    ```bash
    python kafka_consumer.py
    ```
 
+4. Run Batch Processing:
+   ```bash
+   python batch_processing.py
+   ```
+
+## Features
+
+- Real-time tweet processing
+- Hashtag analysis
+- Engagement metrics
+- Language distribution
+- Performance comparison between batch and streaming modes
+
 ## Output
 
-- The Spark Streaming application will:
-  - Print top 10 hashtags every 10 seconds
-  - Save hashtag counts to the `hashtag_counts` directory
-- The Kafka Consumer will save processed tweets to `processed_tweets.csv`
-
-## Notes
-
-- The Spark Streaming application processes data in 10-second batches
-- Hashtag analysis includes case-insensitive counting
-- Results are saved in CSV format for further analysis 
+- Processed tweets saved to PostgreSQL
+- Real-time analytics displayed in console
+- Batch vs Streaming performance metrics 
