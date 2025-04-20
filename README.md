@@ -34,6 +34,7 @@ A comprehensive system for processing Twitter data in real-time using Kafka, Spa
 - Generates visualizations for performance analysis
 - Creates various plots and charts
 
+<<<<<<< HEAD
 ## Prerequisites
 
 - Python 3.8+
@@ -43,6 +44,9 @@ A comprehensive system for processing Twitter data in real-time using Kafka, Spa
 - Required Python packages (listed in requirements.txt)
 
 ## Installation
+=======
+## Setup
+>>>>>>> 06af70ca2b5cf7d76db3b0740d247f420a8dcf60
 
 1. Clone the repository:
 ```bash
@@ -125,6 +129,7 @@ python visualize_metrics.py
 
 ## Metrics Tracked
 
+<<<<<<< HEAD
 1. **Tweet Metrics**
    - Total tweets processed
    - Engagement metrics (likes, retweets, replies)
@@ -177,3 +182,8 @@ The system includes comprehensive error handling for:
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details. 
+=======
+- Processed tweets saved to PostgreSQL
+- Real-time analytics displayed in CLI
+- Batch vs Streaming performance metrics 
+>>>>>>> 06af70ca2b5cf7d76db3b0740d247f420a8dcf60
