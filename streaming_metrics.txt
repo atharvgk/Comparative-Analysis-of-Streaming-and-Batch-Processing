@@ -1,0 +1,32 @@
+
+=== Streaming Metrics at 2025-04-20 23:32:10.550807 ===
+Total Tweets Processed: 1
+Total Engagement: 6
+
+Top Engaging Users:
+User: mochico0123, Engagement: 6
+
+Language Distribution:
+Language: ja, Count: 1
+
+==================================================
+
+=== Streaming Metrics at 2025-04-20 23:32:12.112926 ===
+Total Tweets Processed: 7
+Total Engagement: 21
+
+Top Engaging Users:
+User: Caput_LupinumSG, Engagement: 6
+User: ciffi, Engagement: 4
+User: 0xGenetikciniz, Engagement: 4
+User: xlr8harder, Engagement: 4
+User: Vishwasrisiri, Engagement: 2
+User: GazeteKarinca, Engagement: 1
+User: FierceElectron, Engagement: 0
+
+Language Distribution:
+Language: en, Count: 4
+Language: tr, Count: 2
+Language: de, Count: 1
+
+==================================================
